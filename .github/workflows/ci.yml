@@ -1,0 +1,44 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install app dependencies
+        run: |
+          cd app
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install agent dependencies
+        run: |
+          if [ -f agent/requirements.txt ]; then
+            cd agent
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+          fi
+
+      - name: Validate Python syntax
+        run: |
+          python -m py_compile app/main.py
+          if [ -f agent/agent.py ]; then python -m py_compile agent/agent.py; fi
+
+      - name: Build Docker image
+        run: |
+          cd app
+          docker build -t ai-devops-app .

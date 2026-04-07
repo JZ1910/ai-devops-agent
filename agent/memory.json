@@ -1,0 +1,64 @@
+{
+  "recent_incidents": [
+    {
+      "time": "2026-04-06 03:08:29.510783",
+      "action": "do_nothing",
+      "reason": "The pod is currently healthy, so no action is required.",
+      "state": "healthy"
+    },
+    {
+      "time": "2026-04-06 03:08:39.929904",
+      "action": "do_nothing",
+      "reason": "The pod is already healthy, no action is needed.",
+      "state": "healthy"
+    },
+    {
+      "time": "2026-04-06 03:58:53.532157",
+      "action": "restart_pod",
+      "reason": "The pod is currently down and unhealthy, so restarting it is the best course of action to restore its functionality.",
+      "state": "down"
+    },
+    {
+      "time": "2026-04-06 03:59:36.989329",
+      "action": "restart_pod",
+      "reason": "The pod is down and not healthy, so a restart is necessary to try and resolve the issue.",
+      "state": "down"
+    },
+    {
+      "time": "2026-04-06 04:00:20.217145",
+      "action": "restart_pod",
+      "reason": "The pod is currently unhealthy and down, so a restart is necessary to attempt to resolve the issue.",
+      "state": "down"
+    },
+    {
+      "time": "2026-04-06 04:01:03.505212",
+      "action": "restart_pod",
+      "reason": "The pod is reported as unhealthy and down, so a restart is necessary to attempt to restore its health and functionality.",
+      "state": "down"
+    },
+    {
+      "time": "2026-04-06 04:01:46.704704",
+      "action": "restart_pod",
+      "reason": "The pod is down and unhealthy, so a restart is necessary to try and resolve the issue.",
+      "state": "down"
+    },
+    {
+      "time": "2026-04-06 04:02:30.188091",
+      "action": "restart_pod",
+      "reason": "The pod is currently unhealthy and down, so restarting it is the most appropriate course of action to restore functionality.",
+      "state": "down"
+    },
+    {
+      "time": "2026-04-06 04:03:16.456871",
+      "action": "restart_pod",
+      "reason": "The pod is currently unhealthy and down, so restarting it is the best course of action to restore its functionality.",
+      "state": "down"
+    },
+    {
+      "time": "2026-04-06 04:04:12.146585",
+      "action": "restart_pod",
+      "reason": "The pod is currently down and unhealthy, so restarting it is the best course of action to try and restore its health and functionality.",
+      "state": "down"
+    }
+  ]
+}
